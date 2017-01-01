@@ -22,6 +22,10 @@ static const char* TAG = "BMP180";
 
 #define BMP180_ADDRESS 0x77  // I2C address of BMP180
 
+#define BMP180_ULTRA_LOW_POWER  0
+#define BMP180_STANDARD         1
+#define BMP180_HIGH_RES         2
+#define BMP180_ULTRA_HIGH_RES   3
 
 #define BMP180_CAL_AC1          0xAA  // Calibration data (16 bits)
 #define BMP180_CAL_AC2          0xAC  // Calibration data (16 bits)
@@ -35,6 +39,10 @@ static const char* TAG = "BMP180";
 #define BMP180_CAL_MC           0xBC  // Calibration data (16 bits)
 #define BMP180_CAL_MD           0xBE  // Calibration data (16 bits)
 
+#define BMP180_CONTROL             0xF4  // Control register
+#define BMP180_DATA_TO_READ        0xF6  // Read results here
+#define BMP180_READ_TEMP_CMD       0x2E  // Request temperature measurement
+#define BMP180_READ_PRESSURE_CMD   0x34  // Request pressure measurement
 
 // Calibration parameters
 static int16_t ac1;
